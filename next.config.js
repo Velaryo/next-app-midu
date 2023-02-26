@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // para permitir uso de rutos
+  // nueva forma
+  experimental: {
+    appDir: true
+  },
+  reactStrictMode: true
 }
 
 module.exports = nextConfig
