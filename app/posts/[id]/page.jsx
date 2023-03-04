@@ -1,4 +1,21 @@
-export default function Post ({ params }) {
+const fetchSinglePost = (id) => {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { 
+        next: {
+            // regenera el fetch cada minuto
+            revalidate: 60
+        }
+     })
+      .then(res => res.json())
+}
+  
+export default async function Post ({ params }) {
   const { id } = params
-  return <h1>Un post con id {id}</h1>
+  const post = await fetchSinglePost(id)
+
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+    </article>
+  )
 }
