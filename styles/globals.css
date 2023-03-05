@@ -110,3 +110,7 @@ a {
     color-scheme: dark;
   }
 }
+
+h1 {
+  font-family: var(--font-grotesk), sans-serif;
+}
