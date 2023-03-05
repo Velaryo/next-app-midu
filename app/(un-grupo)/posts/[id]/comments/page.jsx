@@ -1,5 +1,6 @@
-const fetchComments = async (id) => {
+import Image from "next/image"
 
+const fetchComments = async (id) => {
     // para fines didacticos
     // retarda la pag 5 seg en cargar
     await new Promise(resolve => setTimeout(resolve, 3000))
@@ -24,6 +25,11 @@ export default async function Post ({ params }) {
     <ul style={{fontSize: '10px'}}>
         {comments.map(comment => (
             <li key={comment.id}>
+                <Image 
+                width='50' height='50'
+                src={`https://api.dicebear.com/5.x/initials/svg?seed=${comment.name}`}
+                alt={comment.name} />
+
                 <h2>{comment.name}</h2>
                 <p>{comment.body}</p>
             </li>
