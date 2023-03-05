@@ -2,7 +2,10 @@ const fetchComments = async (id) => {
 
     // para fines didacticos
     // retarda la pag 5 seg en cargar
-    await new Promise(resolve => setTimeout(resolve, 5000))
+    await new Promise(resolve => setTimeout(resolve, 3000))
+
+    // control de errores
+    //throw new Error('No se pudo obtener los comentarios')
 
     return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, { 
         next: {
