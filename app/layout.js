@@ -3,6 +3,7 @@ import '../styles/globals.css'
 
 import { Navigation } from '../components/Navigation'
 import { font } from './font'
+import Providers from './Providers'
 
 export const metadata = {
   title: 'UN titulo',
@@ -13,9 +14,12 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='es'>
       <head />
+      
       <body className={font.variable}>
-        <Navigation />
-        {children}
+        <Providers>
+          <Navigation />
+          {children}
+        </Providers>
       </body>
     </html>
   )

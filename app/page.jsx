@@ -1,3 +1,10 @@
+import DarkModeBtn from "./DarkModeBtn"
+
 export default function HomePAge () {
-  return <h1>holawa</h1>
+  return (
+    <>
+      <DarkModeBtn />
+      <h1>holawa</h1>
+    </>
+  )
 }
