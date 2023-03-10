@@ -1,0 +1,60 @@
+{
+    "data": {
+        "asset_id": "783d7506bcab84c2e95a545ddf752476",
+        "public_id": "images/lbebzffxflssot8htnfy",
+        "version": 1678406407,
+        "version_id": "799de00be2977efbc45f54076b93b8d3",
+        "signature": "48c9d863155fe9fc29fd0fa95cd1a9bd88660aa0",
+        "width": 1920,
+        "height": 1792,
+        "format": "png",
+        "resource_type": "image",
+        "created_at": "2023-03-10T00:00:07Z",
+        "tags": [],
+        "bytes": 3937512,
+        "type": "upload",
+        "etag": "c4bd1771ab10187ec192088c7b625185",
+        "placeholder": false,
+        "url": "http://res.cloudinary.com/dmnjozjab/image/upload/v1678406407/images/lbebzffxflssot8htnfy.png",
+        "secure_url": "https://res.cloudinary.com/dmnjozjab/image/upload/v1678406407/images/lbebzffxflssot8htnfy.png",
+        "folder": "images",
+        "access_mode": "public",
+        "original_filename": "antho"
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "adapter": [
+            "xhr",
+            "http"
+        ],
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+            "Accept": "application/json, text/plain, */*"
+        },
+        "method": "post",
+        "url": "https://api.cloudinary.com/v1_1/dmnjozjab/image/upload",
+        "data": {}
+    },
+    "request": {}
+}
