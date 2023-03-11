@@ -19,7 +19,7 @@ function componenteImagen(image){
 }
 
 export default function Cloudinary() {
-  const preset_key = process.env.CLOUDINARY_IMAGES_DIRECTORY
+  const preset_key = process.env.NEXT_PUBLIC_CLOUDINARY_IMAGES_DIRECTORY
   const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
   const [image, setImage] = useState()
 
