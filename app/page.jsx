@@ -1,4 +1,4 @@
-import DarkModeBtn from "./DarkModeBtn"
+import DarkModeBtn from './DarkModeBtn'
 
 export default function HomePAge () {
   return (

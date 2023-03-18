@@ -1,5 +1,3 @@
 export default function Loading () {
-    return (
-        <p>Cargando....</p>
-    )
+  return <p>Cargando....</p>
 }

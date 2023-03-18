@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -8,10 +8,10 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+  AlertDialogTrigger
+} from '@/components/ui/alert-dialog'
 
-export default function shad() {
+export default function shad () {
   return (
     <>
       <AlertDialog>
@@ -31,5 +31,5 @@ export default function shad() {
         </AlertDialogContent>
       </AlertDialog>
     </>
-  );
+  )
 }

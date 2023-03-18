@@ -1,15 +1,14 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 const fetchSinglePost = (id) => {
-    return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { 
-        next: {
-            // regenera el fetch cada minuto
-            revalidate: 60
-        }
-     })
-      .then(res => res.json())
+  return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    next: {
+      // regenera el fetch cada minuto
+      revalidate: 60
+    }
+  }).then((res) => res.json())
 }
-  
+
 export default async function Post ({ children, params }) {
   const { id } = params
   const post = await fetchSinglePost(id)
@@ -19,9 +18,7 @@ export default async function Post ({ children, params }) {
       <h1>{post.title}</h1>
       <p>{post.body}</p>
 
-      <Link href={`/posts/${id}/comments`}>
-        Ver comentarios
-      </Link>
+      <Link href={`/posts/${id}/comments`}>Ver comentarios</Link>
       {children}
     </article>
   )

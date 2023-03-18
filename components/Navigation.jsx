@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from './Navigation.module.css'
 
-
 const links = [
   {
     label: 'Home',
@@ -10,7 +9,8 @@ const links = [
   {
     label: 'About',
     route: '/about'
-  }, {
+  },
+  {
     label: 'Posts',
     route: '/posts'
   }
