@@ -5,9 +5,17 @@ import { useEffect } from 'react'
 
 import { yupResolver } from '@hookform/resolvers/yup' //conecta yup con hook form
 import * as yup from 'yup' //lib de valdiacion
+import { setLocale } from 'yup'; //traduccion messages de validacion
 
-const sleep = (time) =>
-  new Promise((resolve) => setTimeout(() => resolve(), time))
+setLocale({
+  mixed: {
+    default: 'No válido',
+  },
+  string: {
+    min: 'Debe ser mayor que ${min}',
+  },
+});
+
 
 const schema = yup
   .object({
@@ -20,22 +28,17 @@ const schema = yup
   })
   .required()
 
-async function onSubmit(data) {
-  console.log(data)
-  await sleep(5000)
-  const response = await fetch('https://reqres.in/api/users', {
-    method: 'POST',
-    body: JSON.stringify(data),
-  })
-  const json = await response.json()
-  console.log(json)
-}
+
 
 export default function Form2() {
+
+  
+
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
+    getValues
   } = useForm({
     //conecta yup con hook form
     resolver: yupResolver(schema),
@@ -60,6 +63,11 @@ export default function Form2() {
   const inputPhone = register('contact.phone')
   const inputImage = register('image')
 
+  //ver valores - solo lectura
+  function logValues () {
+    console.log( getValues() )
+  }
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* el handleSubmit es del form */}
@@ -82,14 +90,13 @@ export default function Form2() {
         <label>Phone</label>
         <input type="text" {...inputPhone} />
 
-
-
-
-
         <input {...inputImage} type="file" />
 
         <button type="submit">Enviar</button>
 
+        <button onClick={logValues}>
+          ver valores
+        </button>
 
       </div>
     </form>
